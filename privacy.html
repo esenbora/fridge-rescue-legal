@@ -75,7 +75,7 @@
     <h2>Photos and the AI provider</h2>
     <p>
       Scanning is optional and asks for your explicit permission first. When you allow it, the photo
-      is uploaded to a private, user-scoped folder in Supabase Storage and sent through OpenRouter to a vision model that
+      is uploaded to a private, user-scoped folder in Cloudflare R2 storage and sent through OpenRouter to a vision model that
       reads only the visible ingredients. The model does not write the recipes; those come from a fixed
       catalogue that a human has cooked and checked. After detection, the stored file is deleted.
       You can withdraw the permission at any time in Settings, and ingredient entry keeps working
@@ -84,7 +84,7 @@
 
     <h2>Processors we use</h2>
     <ul>
-      <li><strong>Supabase</strong> — anonymous authentication and temporary photo storage</li>
+      <li><strong>Cloudflare R2</strong> — temporary photo storage until detection finishes</li>
       <li><strong>OpenRouter</strong> — routes the photo to a vision model for ingredient detection</li>
       <li><strong>RevenueCat</strong> — subscription and trial status</li>
       <li><strong>Apple</strong> — payment processing and app distribution</li>
@@ -153,7 +153,7 @@
 
       <h2>Fotoğraflar ve yapay zekâ sağlayıcısı</h2>
       <p>
-        Tarama isteğe bağlıdır ve önce açık iznini ister. İzin verdiğinde fotoğraf, Supabase Storage
+        Tarama isteğe bağlıdır ve önce açık iznini ister. İzin verdiğinde fotoğraf, Cloudflare R2 depolamada
         içinde yalnızca sana ait bir klasöre yüklenir ve OpenRouter üzerinden bir görsel modele gönderilir; model yalnız görünür
         malzemeleri okur. Tarifleri model yazmaz; tarifler, bir insanın pişirip doğruladığı sabit
         katalogdan gelir. Algılama bittiğinde dosya silinir. İzni istediğin an Ayarlar'dan geri
@@ -162,7 +162,7 @@
 
       <h2>Kullandığımız hizmet sağlayıcılar</h2>
       <ul>
-        <li><strong>Supabase</strong> — anonim kimlik doğrulama ve geçici fotoğraf depolama</li>
+        <li><strong>Cloudflare R2</strong> — algılama bitene kadar geçici fotoğraf depolama</li>
         <li><strong>OpenRouter</strong> — fotoğrafı malzeme algılaması için bir görsel modele yönlendirir</li>
         <li><strong>RevenueCat</strong> — abonelik ve deneme durumu</li>
         <li><strong>Apple</strong> — ödeme işleme ve uygulama dağıtımı</li>
